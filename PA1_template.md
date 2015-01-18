@@ -4,6 +4,8 @@ Reproducible Research: Peer Assessment 1
 <br>
 
 
+
+
 ##Loading and preprocessing the data
 
 
@@ -29,7 +31,8 @@ hist(total_steps_per_day, main = 'Histogram of the total number \n of steps take
      xlab = 'Total number of steps per day', col = 'blue', ylim= c(0,30))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+![plot of chunk figure1](figure/figure1-1.png) 
+
 
 **2. Calculate and report the mean and median total number of steps taken per day**
 
@@ -70,7 +73,9 @@ plot(x= as.integer(names(average_steps_per_interval)),y = as.vector(average_step
      ylab = 'Average steps', col= 'blue' )
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![plot of chunk figure2](figure/figure2-1.png) 
+ 
+
 
 **2. Which 5-minute interval, on average across all the days in the dataset, contains 
    the maximum number of steps?**
@@ -208,7 +213,7 @@ hist(total_steps_per_day_newdata,xlab="Total number of steps taken each day",
      main="Histogram of daily number \n of steps  from imputed data", col = 'blue')
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
+![plot of chunk figure3](figure/figure3-1.png) 
 
 ```r
 mean(total_steps_per_day_newdata)
@@ -225,6 +230,8 @@ median(total_steps_per_day_newdata)
 ```
 ## [1] 10766.19
 ```
+
+
 
 **- Do these values differ from the estimates from the first part of the assignment?**
 
@@ -276,7 +283,9 @@ xyplot(average_steps_per_interval~interval | day, data=newdata, type="l",
        main="", xlab="Interval",  ylab="Number of steps",layout=c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
+![plot of chunk figure4](figure/figure4-1.png) 
+
+
 
 From the panel plot, we can see there are slight differences in activity patterns between
 weekdays and weekends.
